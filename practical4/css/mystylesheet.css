@@ -1,0 +1,292 @@
+/* header starts from here */
+.header
+{
+    height:7%;
+    widows: 100%;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.header-div1
+{
+    float: left;
+    height:7%;
+    width:50%;
+}
+.header-div2
+{
+    float: right;
+    height:7%;
+    width:50%;
+}
+
+.header-img1
+{
+    margin:2px 0px 0px 10px
+}
+.header-img2
+{
+    height:15px;
+    width:60px;
+    float:right;
+    margin: 12px 20px 10px 0px;
+}
+
+/* header end from here */
+
+
+/* Container starts from here */
+
+.container
+{
+    height:80%;
+    width:100%;
+    /* border:1px solid black; */
+    margin-top:30px;
+}
+
+.container-div1
+{
+    float: left;
+    height:100%;
+    width:28%;
+    /* border:1px solid black; */
+}
+.container-div1-part1
+{
+    height:80%;
+    width:100%;
+    /* border:1px solid black; */
+}
+
+.container-div1-part2
+{
+    height:15%;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top:20px;
+}
+
+.container-div2
+{
+    float: left;
+    height:100%;
+    width:37%;
+    /* border:1px solid black; */
+    margin:0px 40px 0px 40px;
+}
+
+/* container division2 starts from here */
+
+.container-div2-part1
+{
+    height:10%;
+    widows: 100%;
+    /* border:1px solid black; */
+}
+
+.container-div2-part2
+{
+    height:10%;
+    widows: 100%;
+    border-bottom:2px solid gray; */
+}
+
+.container-div2-part3
+{
+    height:10%;
+    width:100%;
+    /* border:1px solid black; */
+    margin-top:23px;
+}
+
+.container-div2-part4
+{
+    height:41%;
+    width:100%;
+    /* border:1px solid black; */
+    margin-top:19px;
+}
+
+.container-div2-part5
+{
+    height:14%;
+    width:100%;
+    /* border:1px solid black; */
+    margin-top:20px;
+}
+
+.container-col-md1
+{
+    float: left;
+    height:50%;
+    width:12%;
+    /* border:1px solid; */
+    margin-top:30px;
+    text-decoration:line-through;
+    color:gray;
+}
+.container-col-md2
+{
+    float: left;
+    height:50%;
+    width:12%;
+    /* border:1px solid; */
+    margin:30px 0px 0px 4px;
+    background-color:lightgoldenrodyellow;
+}
+
+.container-col-md3
+{
+    float: left;
+    height:80%;
+    width:60%;
+    /* border:1px solid black; */
+    margin:5px 15px 0px 0px;
+}
+.container-col-md4
+{
+    float:left;
+    height:80%;
+    width:33%;
+    /* border:1px solid black; */
+    margin-top:5px;
+}
+
+.lable-body
+{
+    
+    font-size: 30px;
+}
+
+.lable-body1
+{
+    font-size:18px;
+    color: rgb(150, 92, 150);;;
+}
+
+.p-body1
+{
+    font-size:28px;
+    text-align: justify;
+    color: gray;;
+}
+
+.button1
+{
+    float:right;
+    font-size: 22px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding:15px 25px 15px 25px;
+    margin-top:5px;
+    background-color:rgb(150, 92, 150);;
+}
+.button2
+{
+    font-size:20px;
+    color: gray;
+    padding:10px 30px 10px 30px;
+    margin:0px 10px 0px 10px;
+    background-color:rgb(240, 238, 238);
+}
+
+.container-div3-part1
+{
+    height:8%;
+    widows: 100%;
+     border-bottom:3px solid black; 
+     margin-bottom: 30px;
+}
+
+.container-div3-part2
+{
+    height:14%;
+    widows: 100%;
+    border-bottom:1px solid rgb(216, 212, 212);   
+}
+
+.con1-div3-part1  
+{
+    float:left;
+    height:99%;
+    width:69%;
+    /* border-bottom:1px solid gray;  */
+    
+
+} 
+.con-div3-part2
+{
+    float:left;
+    height:99%;
+    width:28%;
+    /* border:1px solid black; */
+    margin-left:7px;
+}
+.con-div3-part4
+{
+    height:10%;
+    width: 100%;
+    border-bottom:1px solid rgb(192, 191, 191);
+    margin-top:10px;
+}
+
+.con-div3-part5
+{
+    height:40%;
+    width:100%;
+    /* border: 1px solid black; */
+    margin-top:15px;
+}
+.col-md5
+{
+    float:left;
+    height:20%;
+    width:48%;
+    /* border:1px solid black; */
+}
+.col-md6
+{
+    float:left;
+    height:20%;
+    width:48%;
+    /* border:1px solid black; */
+    margin-left:6px;
+}
+
+.p-con3
+{
+    font: size 15px;
+    color: gray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button3
+{
+    float:left;
+    font-size: 20px;
+    color: white;
+    padding:10px 30px 8px 30px;
+    /* margin-top:5px; */
+    background-color:rgb(32, 32, 32);
+}
+.footer
+{
+    height:8%;
+    widows: 100%;
+    /* border:1px solid black; */
+}
+
+/* Footer starts from here */
+.p-footer
+{
+    text-align: center;
+    font-size:22px;
+    color:rgb(150, 92, 150);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.img1
+{
+    margin-top:10px;
+}
