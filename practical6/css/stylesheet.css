@@ -1,0 +1,1177 @@
+/* Header starts from here */
+.header
+{
+    display: flex;
+    flex-direction: column;
+    border-bottom:2px solid gray;
+}
+.header .container1
+{
+    border:1px solid black;
+    background-color:rgb(20, 19, 19);
+    text-align: center;
+}
+.header .link
+{
+    font-size: 20px;
+    color: white;
+    padding:10px;
+    text-decoration: none;
+} 
+.header .container2-left
+{
+    border-bottom: 1px solid gray;
+    padding:100px 0px 100px 50px;
+    display: flex; 
+    justify-content: flex-start;
+}
+.header .img
+{
+    height:350px;
+    width:370px;
+}
+.header .container-right
+{
+    margin-left: 50px;
+}
+.header .p1
+{
+    padding-top:5px;
+    font-size: 60px;
+    font-family: sans-serif;
+    color: rgb(82, 79, 79);
+}
+.header .p2
+{
+    padding-top:10px;
+    font-size: 30px;
+    color: gray;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header .button
+{
+    margin-top: 20px;
+    font-size: 25px;
+    color:white;
+    background-color: rgb(27, 151, 145);
+    border-radius: 8px;
+    padding:20px 40px 20px 40px;
+    border:none;
+}
+/* header end here */
+
+@media only screen and (min-width: 375px) and (max-width:424px)
+ {  
+    .header .link
+    {   
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        padding:5px;
+    } 
+    .header .container2-left
+    {
+        flex-direction: column;
+        padding:30px 5px 40px 5px;
+    }
+    .header .img
+    {
+        width:340px; 
+    }
+    .header .container-right
+    {
+        margin-left: 15px;
+    }
+    .header .p1
+    {
+        font-size: 30px;
+    }
+    .header .p2
+    {
+        font-size: 12px;
+    }
+    .header .button
+    {
+        margin-top: 10px;
+        font-size: 15px;
+        padding:10px 25px 10px 25px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width:767px)
+{
+    .header .link
+    {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        padding:5px;
+    } 
+    .header .container2-left
+    {
+        flex-direction: column;
+        padding:40px 0px 50px 16px;
+    }
+    
+    .header .container-right
+    {
+        margin-left: 7px;
+        margin-top:10px;
+    }
+    .header .p1
+    {
+         font-size: 27px;
+    }
+    .header .p2
+    {
+        font-size: 13px;
+    }
+    .header .button
+    {
+        margin-top: 5px;
+        font-size: 14px;
+        padding:12px 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+    .header .link
+    {
+        font-size: 20px;
+    } 
+    .header .container2-left
+    {
+        padding:80px 0px 80px 30px;
+    }
+    .header .img
+    {
+        height:230px;
+        width:220px;
+    }
+    .header .container-right
+    {
+        margin-left: 30px;
+        margin-top:15px;
+    }
+    .header .p1
+    {
+        font-size: 32px;
+    }
+    .header .p2
+    {
+        font-size: 16px;
+    }
+    .header .button
+    {
+        font-size: 15px;
+        padding:15px 20px 15px 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px)
+{
+    .header .link
+    {
+        font-size: 20px;
+    }
+    .header .container2-left
+    {
+        padding:70px 0px 70px 35px;
+    }
+    .header .img
+    {
+        height:280px;
+        width:260px;
+    }
+    .header .container-right
+    {
+        margin-left: 40px;
+        margin-top: 15px;
+    }
+    .header .p1
+    {
+        font-size: 45px;
+    }
+    .header .p2
+    {
+        font-size: 22px;
+    }
+    .header .button
+    {
+        font-size: 20px;
+        padding:15px 25px;
+    }
+}
+
+
+
+
+
+/* Container starts from here  */
+.container
+{
+    display:flex;
+    padding:40px;
+    background-color: rgba(236, 233, 233, 0.534);
+    flex-direction: column;
+    border-bottom: 2px solid gray;
+    padding-bottom:100px;
+}
+.container .div1
+{
+    text-align: center;
+    font-size:25px;
+    font-family: sans-serif;
+    padding-top:30px;
+}
+.container .p1
+{
+    padding-bottom: 20px;
+    font-size:20px;
+    text-align: center;
+    text-decoration:none;
+    color:gray;
+}
+.container .middlediv
+{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.container .mdiv1
+{
+    border:1px solid gray;
+    background-color: white;
+    padding:40px 46px 40px 46px; 
+    
+}
+.container .p2
+{   
+    text-align: center;
+    font-size:35px;
+    color:rgb(68, 67, 67);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container .img1
+{
+     padding-left:120px;
+}
+.container .p3
+{
+    font-size: 25px;
+    color: gray;
+}
+.container .lastdiv
+{
+    display: flex;
+    padding-top:10px;
+    flex-direction: column;
+}
+.container .p4
+{
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+}
+.container .button
+{
+    
+    font-size: 20px;
+    color:white;
+    background-color: rgb(27, 151, 145);
+    border-radius: 8px;
+    padding:15px 40px 15px 40px;
+    border:none;
+}
+.container .div2
+{
+    text-align: center;
+}
+
+@media only screen and (max-width: 375px)
+{
+    .container
+    {
+        padding:5px;
+        padding-bottom:60px;
+    }
+    .container .div1
+    {
+         font-size:20px;
+    }
+    .container .p1
+    {
+        font-size:15px;
+    }
+    .container .middlediv
+    {
+        flex-direction: column;
+    }
+    .container .mdiv1
+    {
+        padding:10px 30px;
+        margin-top: 5px;
+    }
+    .container .p2
+    {   
+        font-size:25px;
+    }
+    .container .img1
+    {   
+        height:80px;
+        width:80px;
+        padding-left:95px;
+    }
+    .container .p3
+    {
+        font-size: 20px;
+    }
+    .container .p4
+    {
+        font-size: 16px;
+    }
+    .container .button
+    {
+        font-size: 15px;
+        padding:10px 20px;
+    }
+} 
+
+@media only screen and (min-width: 425px) and (max-width:767px)
+{
+    .container
+    {
+        padding:5px;
+        padding-bottom:60px;
+    }
+    .container .div1    
+    {
+        font-size:22px;
+    }
+    .container .p1
+    {
+        font-size:14px;
+    }
+    .container .middlediv
+    {
+        flex-direction: column;
+    }
+    .container .mdiv1
+    {
+        padding:20px 40px; 
+        margin-top:5px;
+    }  
+    .container .p2
+    {   
+        font-size:30px;
+    }
+    .container .img1
+    {   
+        height:90px;
+        width:90px;
+        padding-left:120px;
+    }
+    .container .p3
+    {
+        font-size: 21px;
+    }
+    .container .p4
+    {
+        font-size: 17px;
+    }
+    .container .button
+    {
+        font-size: 16px;
+        padding:12px 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+    .container
+    {
+        padding:5px;
+        padding-bottom:60px;
+    }
+    .container .div1
+    {
+        font-size:18px;
+    }
+    .container .p1
+    {
+        font-size:14px;
+    }
+    .container .mdiv1
+    {
+        padding:20px 10px;             
+    }
+    .container .p2
+    { 
+        font-size:25px;
+    }
+    .container .img1
+    {   
+        height:70px;
+        width:70px;
+    }
+    .container .p3
+    {
+        font-size: 15px;
+    }
+    
+    .container .p4
+    {
+        font-size: 15px;
+    }
+    .container .button
+    {
+        font-size: 13px;
+        padding:9px 17px;
+    }
+    
+} 
+
+@media only screen and (min-width: 1024px) and (max-width:1439px)
+{
+    .container
+    {
+        padding:5px;
+        padding-bottom:60px;
+    }
+    .container .div1
+    {
+        font-size:23px;
+    }
+    .container .p1
+    {
+        font-size:18px;
+    }
+    
+    .container .mdiv1
+    {
+        padding:22px 20px; 
+    }
+    .container .p2
+    {   
+        font-size:33px;
+    }
+    .container .img1
+    {   
+        height:80px;
+        width:80px;
+        padding-left: 80px;
+    }     
+    .container .p3
+    {
+        font-size: 19px;
+    }
+    
+    .container .p4
+    {
+       font-size: 19px;
+    }
+    .container .button
+    {
+        font-size: 16px;
+        padding:10px 18px 10px 18px;
+    }
+    
+} 
+
+
+
+
+/* container two starts from here */
+.containertwo
+{
+    display:flex;
+    background-color: rgba(221, 217, 217, 0.534);
+    flex-direction: column;
+    border-bottom: 2px solid gray;
+    padding-bottom:100px;
+}
+.containertwo .div1
+{
+    text-align: center;
+    font-size:25px;
+    font-family: sans-serif;
+    padding-top:80px;
+}
+.containertwo .p1
+{
+    font-size:20px;
+    text-align: center;
+    text-decoration:none;
+    color:gray;
+}
+.containertwo .middle
+{
+    display: flex;
+    padding-top:30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.containertwo .img1
+{
+    height:300px;
+    width:450px;
+}
+.containertwo .div3
+{
+    margin-top:10px;
+    padding-bottom:20px;
+    background-color: white;
+}
+.containertwo .div4
+{
+    text-align: center;
+    font-size:25px;
+    padding-top:30px;
+    color: rgb(19, 18, 18);
+}
+.containertwo .div5
+{
+    text-align: center;
+    font-size:22px;
+    padding-top:5px;
+    color: gray;
+}
+.containertwo .lastdiv
+{
+    display: flex;
+    padding-top:30px;
+    flex-direction: column;
+}
+.containertwo .p4
+{
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+}
+.containertwo .div6
+{
+    text-align: center;
+}
+.containertwo .button
+{
+    
+    font-size: 20px;
+    color:white;
+    background-color: rgb(27, 151, 145);
+    border-radius: 8px;
+    padding:15px 40px 15px 40px;
+    border:none;
+}
+
+@media only screen and (max-width: 375px)
+{
+    .containertwo
+    { 
+        padding-bottom:60px;
+    }
+    .containertwo .div1
+    {
+        font-size:19px;
+        padding-top:30px;
+    }
+    .containertwo .p1
+    {
+        font-size:14px;
+    }
+    .containertwo .middle
+    {
+        flex-direction: column;
+        padding-top:30px;
+    }
+    .containertwo .div3
+    {
+        box-shadow: 1px 2px 3px rgb(124, 122, 122);
+        padding-bottom:15px;
+    }
+    .containertwo .img1
+    {
+        height:140px;
+        width:358px;
+    }
+    
+    .containertwo .div4
+    {
+        font-size:22px;
+    }
+    .containertwo .div5
+    {
+        font-size:17px;
+    }
+    
+    .containertwo .p4
+    {
+        font-size: 15px;
+    }
+    
+    .containertwo .button
+    {
+        font-size: 15px;
+        padding:10px 30px ;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width:767px)
+{
+    .containertwo
+    {
+        padding-bottom:80px;
+    }
+    .containertwo .div1
+    {
+        font-size:20px;
+        padding-top:30px;
+    }
+    .containertwo .p1
+    {
+        font-size:17px;
+    }
+    .containertwo .middle
+    {
+        flex-direction: column;
+        padding-top:30px;
+        
+    }
+    .containertwo .img1
+    {
+        height:190px;
+        width:408px;
+    }
+    .containertwo .div3
+    {
+        box-shadow: 1px 2px 3px rgb(124, 122, 122);
+        padding-bottom:15px;
+    }
+    .containertwo .div4
+    {
+        font-size:26px;
+    }
+    .containertwo .div5
+    {
+        font-size:20px;
+    }
+    
+    .containertwo .p4
+    {
+        font-size: 17px;
+    }
+    .containertwo .button
+    {
+        
+        font-size: 15px;
+        padding:10px 33px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+    .containertwo
+    {
+        padding-bottom:90px;
+    }
+    .containertwo .div1
+    {
+        font-size:20px;
+        padding-top:30px;
+    }
+    .containertwo .p1
+    {
+        font-size:15px;
+    }
+    
+    .containertwo .img1
+    {
+        height:200px;
+        width:240px;
+    }
+    .containertwo .div3
+    {
+        padding-bottom:20px;
+        background-color: white;
+    }
+    .containertwo .div4
+    {
+        font-size:21px;
+    }
+    .containertwo .div5
+    {
+        font-size:16px;
+    }
+    
+    .containertwo .p4
+    {
+        font-size: 20px;
+    }
+    
+    .containertwo .button
+    {
+       
+        font-size: 15px;
+        padding:10px 33px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px)
+{
+    .containertwo .div1
+    {
+        font-size:22px;
+        padding-top:30px;
+    }
+    .containertwo .p1
+    {
+        font-size:17px;
+    }
+    
+    .containertwo .img1
+    {
+        height:240px;
+        width:320px;
+    }
+    .containertwo .div3
+    {
+        padding-bottom:20px;
+    }
+    .containertwo .div4
+    {
+        font-size:24px;
+    }
+    .containertwo .div5
+    {
+        font-size:18px;
+    }
+    
+    .containertwo .p4
+    {
+        font-size: 21px;
+    }
+    
+    .containertwo .button
+    {
+        
+        font-size: 17px;
+        padding:13px 36px;
+    }
+}
+
+
+
+/* footer starts from here */
+.footer
+{
+    display:flex;
+    background-color: rgb(63, 62, 62);
+    flex-direction: column;
+    border-bottom: 2px solid gray;
+    padding-bottom:100px;
+    justify-content: flex-start;
+}
+.footer .div1
+{
+    text-align: center;
+    font-size:25px;
+    font-family: sans-serif;
+    margin-top:100px;
+    color: rgb(228, 224, 224);
+}
+.footer .p1
+{
+    font-size:20px;
+    text-align: center;
+    text-decoration:none;
+    color:rgb(170, 168, 168);
+}
+.footer .form1
+{
+    border-bottom:1px inset rgb(37, 37, 37);
+     padding-bottom:15px;
+}
+.footer .form-div1
+{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.footer .input1
+{
+    background-color: rgb(37, 37, 37);
+    width: 487px;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    
+}
+.footer .input2
+{
+    background-color: rgb(37, 37, 37);
+    width: 1018px;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    
+}
+.footer .button
+{
+    
+    font-size: 20px;
+    color:white;
+    background-color: rgb(27, 151, 145);
+    border-radius: 8px;
+    padding:13px 30px 13px 30px;
+    border:none;
+}
+
+.footer .button1
+{
+   
+    font-size: 20px;
+    color:white;
+    background-color: rgb(37, 37, 37);
+    border-radius: 8px;
+    padding:13px 30px 13px 30px;
+    border:none;
+}
+
+.footer .div2
+{
+    
+    border-bottom:1px inset rgb(37, 37, 37);
+    margin-top:10px;
+    padding:30px 0px 50px 0px;
+}
+
+.footer .div2-text
+{
+    text-align: center;
+    color: rgb(236, 231, 231);
+    font-size:18px;
+    font-family: sans-serif;
+    
+}
+.footer .div2-icon
+{
+    text-align: center;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 40px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 4px;
+  }
+.fa-facebook 
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-twitter
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-dribbble
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-linkedin
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-tumblr
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-google
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+.fa-github
+{
+    background-color: rgb(75, 73, 73);
+    color: rgb(37, 37, 37);
+}
+
+.footer .div2-lastdiv
+{
+    text-align: center;
+    font-size: 25px;;
+    color:rgb(37, 37, 37);
+}
+
+@media only screen and (max-width: 375px) 
+{
+    
+    .footer .div1
+    {
+        margin-top: 50px;;
+        font-size:15px;
+    }
+    .footer .p1
+    {
+        font-size:11px;
+    }
+    .footer .form1
+    {
+        padding-bottom:10px;
+    }
+    .footer .input1
+    {
+        width: 146px;
+        padding: 5px 5px;
+        margin: 5px 0;       
+    }
+    .footer .input2
+    {
+       
+        width: 308px;
+        padding: 5px 5px;
+        margin: 5px 0;       
+    }
+    .footer .button
+    {
+        font-size: 12px;
+        padding:8px 15px;
+    }
+
+    .footer .button1
+    {
+        font-size: 12px;
+        padding:8px 15px;
+        margin-left:5px;
+    }
+
+    .footer .div2
+    {      
+        padding:15px 0px;
+    }
+
+    .footer .div2-text
+    {
+        font-size:12px;
+    }
+    .fa 
+    {
+        padding: 8px;
+        font-size: 40px;
+        width: 10px;
+        margin: 5px 2px;
+    }
+    
+    .footer .div2-lastdiv
+    {
+        padding-top:20px;
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width:767px)
+{
+    .footer .div1
+    {
+        font-size:15px;
+        margin-top:50px;
+    }
+    .footer .p1
+    {
+        font-size:12px;
+    }
+    .footer .form1
+    {
+       padding-bottom:40px;
+    }
+    
+    .footer .input1
+    {
+        width: 173px;
+        padding: 5px 5px;
+        margin: 5px 0;
+    }
+    .footer .input2
+    {
+        width: 360px;
+        padding: 5px 5px;
+        margin: 5px 0;
+    }
+    .footer .button
+    {
+        font-size: 12px;
+        padding:8px 15px;
+    }
+
+    .footer .button1
+    {
+        font-size: 12px;
+        padding:8px 15px;
+    }
+
+    .footer .div2
+    {
+        padding:15px 0px 30px 0px;
+    }
+
+    .footer .div2-text
+    {
+        font-size:12px;
+    }
+    .fa 
+    {
+        padding: 8px;
+        font-size: 40px;
+        width: 8px;
+        margin: 5px 2px;
+    }
+    .footer .div2-lastdiv
+    {
+        padding-top:20px;
+        font-size: 11px;;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+    .footer .div1
+    {
+        font-size:17px;
+    }
+    .footer .p1
+    {
+        font-size:13px;
+    }
+    .footer .form1
+    {
+        padding-bottom:40px;
+    }
+    
+    .footer .input1
+    {
+        
+        width: 200px;
+        padding: 5px 5px;
+    }
+    .footer .input2
+    {
+        width: 420px;
+        padding: 5px 5px;
+        margin: 5px 0;        
+    }
+    .footer .button
+    {
+        font-size: 12px;
+        padding:8px 15px;
+    }
+
+    .footer .button1
+    {
+        font-size: 12px;
+        padding:8px 15px;
+    }
+
+    .footer .div2
+    {
+       padding:15px 0px 30px 0px;
+    }
+
+    .footer .div2-text
+    {
+        font-size:15px;
+    }
+    
+    .fa 
+    {
+        padding: 8px;
+        font-size: 40px;
+        width: 10px;
+        margin: 5px 2px;
+    }
+    .footer .div2-lastdiv
+    {
+        
+        padding-top:20px;
+        font-size: 16px;;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px)
+{
+    
+    .footer .div1
+    {
+        font-size:20px;
+        margin-top:40px;
+    }
+    .footer .p1
+    {
+        font-size:17px;
+    }
+    .footer .form1
+    {
+       padding-bottom:40px;
+    }
+    
+    .footer .input1
+    {
+        width: 315px;
+        padding: 5px 5px;
+        margin: 5px 0;
+    }
+    .footer .input2
+    {
+        width: 650px;
+        padding: 5px 5px;
+        margin: 5px 0;
+    }
+    .footer .button
+    {
+        font-size: 15px;
+        padding:8px 15px;
+    }
+
+    .footer .button1
+    {
+        
+        font-size: 15px;
+        padding:8px 15px;
+        border:none;
+        margin-left:5px;
+    }
+
+    .footer .div2
+    {
+        padding:15px 0px 30px 0px;
+    }
+
+    .footer .div2-text
+    {
+        font-size:18px;
+    }
+    
+    .fa 
+    {
+        padding: 9px;
+        font-size: 40px;
+        width: 12px;
+        margin: 5px 2px;
+    }
+    .footer .div2-lastdiv
+    {
+        padding-top:40px;
+        font-size: 19px;
+    }
+}
