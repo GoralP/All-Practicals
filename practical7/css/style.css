@@ -399,14 +399,12 @@ textarea {
 {
     height:70px;
     width:70px;
-    /* margin-left:120px; */
 }
 
 .card-p
 {
     font-size:19px;
 }
-
 .footer-form
 {
     background-color: rgb(37, 37, 37);
@@ -418,7 +416,6 @@ textarea {
     border: none;
     
 }
-
 .footer-input
 {
     background-color: rgb(37, 37, 37);
@@ -430,3 +427,50 @@ textarea {
     border: none;
     
 }
+.footer-button
+{
+    background-color: rgb(37, 37, 37);
+     
+}
+
+@media only screen and (min-width:375px) and (max-width:423px)
+{
+    .footer-form
+    {
+        width:150px;
+        padding:5px 5px;
+    }
+    .footer-input
+    {
+        width:305px;
+        padding:5px 5px;
+    }
+}
+@media only screen and (min-width:425px) and (max-width:767px)
+{
+    .footer-form
+    {
+        width:172px;
+        padding:5px 5px;
+    }
+    .footer-input
+    {
+        width:350px;
+        padding:5px 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px)
+{
+    .footer-form
+    {
+        width:280px;
+        padding:5px 5px;
+    }
+    .footer-input
+    {
+        width:565px;
+        padding:5px 5px;
+    }
+}
+
