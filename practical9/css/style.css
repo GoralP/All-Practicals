@@ -404,6 +404,7 @@ body
     cursor: pointer;
     box-shadow: 10px 10px 50px rgb(241, 94, 75);
 }
+
 .container-text
 {
     font-family: Script MT Bold;
@@ -436,6 +437,31 @@ body
     font-weight: bold;
     font-size: 35px;    
 }
-
+.footer-bg
+{
+    background-color: rgb(245, 240, 237);
+}
+.footer-rytborder
+{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    background-color: rgb(241, 94, 75);
+}
+.footer-button
+{
+    background-color: rgb(241, 94, 75); 
+    border:none;  
+    font-size: 18px;
+    color: white;
+}
+.footer-bg-img
+{
+    background-image: url('../images/footerbg.png');
+    background-size: 100% 100%;
+}
+.footer-menu
+{
+    padding-top:200px;
+}
 
   
