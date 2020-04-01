@@ -1,0 +1,119 @@
+<html>
+<body>
+<script>
+
+// Variable
+    let x = 5;
+    let y = 6;
+    let z = x + y;
+    alert(z);
+
+    let x=5;
+    let y;
+    y=x;
+    alert(x);
+    alert(y);
+
+    
+// Constant variable
+    const red = "#F00";
+    const blue = "#00F";
+    const orange = "#FF7F00";
+    let color = blue;
+    alert(color); 
+
+    let length = 16;                               
+    let lastName = "Johnson";                      
+    let x = {firstName:"John", lastName:"Doe"};
+    alert(x);  
+
+    let x = "my" + "string";
+    alert(x); 
+
+// Operator 
+    let x = 5; 
+    let y = 3;
+    alert( x - y);
+
+// Confirmation box
+    let x = confirm("Are you sure you want to exit?");
+    alert(x);
+
+// Prompt box
+    let age = prompt('How old are you?', 100);
+    alert(`You are ${age} years old!`);  
+    
+// Comparisons    
+    let x="5", 
+    let y=5;
+    alert(x==y);
+    
+// While loop
+    let i = 0;
+    while (i < 3) 
+    { 
+        i++;
+        alert( i );
+    }
+
+// For loop
+    for (let i = 0; i <= 3; i++) 
+    { 
+        alert(i);
+    }
+
+// While loop    
+    let sum = 0;
+    while (true) 
+    {
+
+        let value = +prompt("Enter a number", '');
+
+        if (!value) 
+        break; 
+
+        sum += value;
+
+    }
+    alert( 'Sum: ' + sum );
+
+// Conditional operator
+    let x=5;
+    let y=10; 
+    if (x > y)
+    {
+        alert("x is greater than y");
+    }
+    else
+    {
+        alert("x is smaller than y");
+    }
+
+//  Switch case   
+    
+    let x= 4;
+
+    switch (x) {
+        case 1:
+            alert('ahmedabad');
+        case 2:
+            alert('surat');
+        case 3:
+            alert('rajkot');
+        case 4:
+            alert('mumbai');
+        default:
+            alert( "enter number between 1 to 5" );
+    }
+
+// Function
+    function sum(x, y) 
+    {
+        return x + y;
+    }
+    let result = sum(1, 2);
+    alert( result );
+</script>
+
+</body>
+</html>
