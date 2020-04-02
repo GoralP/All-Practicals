@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Js Practical</title>
+    </head>
+<body>
+    <script>
+    // object    
+        let car={color:"black", brand:"ford", "car model": "figo"}
+        alert(car.color);
+        alert(car.brand);
+        alert(car.isAdmin=true);
+        alert(car["car model"]);
+           
+
+    // Constructor function    
+        function employee(name,city) 
+        {
+            this.name = name;
+            this.city = city;
+        }
+        let emp = new employee("Denny","Ahmedabad");
+        alert(emp.name); 
+        alert(emp.city);  
+
+    // A primitive as an object
+        let str = "Hello World";
+        let x=12.5689
+        alert(x.toFixed(3))
+        alert(typeof "hello")
+        let num = Number("12345");
+        alert(num);
+
+    // String   
+        let x="hello world"
+        alert(x.length);
+        alert(x[0]);
+        alert(x.charAt(6) );
+        alert(x[x.length -3] );
+        x='hiiii' + x[6 ];
+        alert(x);      
+        alert( x.toUpperCase());
+        alert( x.toLowerCase());  
+        alert( x[0].toUpperCase());
+        alert(x.indexOf('hello'));
+        alert(x.indexOf('hEllo'));
+        alert(x.indexOf("world"));
+        alert( x.includes("world") );
+        alert( x.includes("hii") );
+        alert( x.startsWith("hello") );
+        alert(x.endsWith("hello"));
+        alert(x.endsWith("rld"));
+        alert(x.slice(0,3));
+        alert(x.slice(4));
+        alert(x.slice(-7,-1));
+        alert(x.substring(2, 8));
+        alert(x.substring(9,2));
+        alert(x.substr(2, 8)); 
+        alert(x.substr(-4, 4));       
+
+    
+        let x = "How are you";
+        if (x.indexOf("are") != -1) 
+        {
+            alert("found it"); 
+        else
+        {
+            alert("Not found");   
+        }
+
+    // Array    
+        let color=["red","blue","orange","pink"]
+        alert(color[1]);
+        color[2] ="black";
+        alert(color);
+        alert(color.length);
+        alert(color.pop()); 
+        alert(color);
+        alert(color.push("green"));
+        alert(color);
+        alert(color.shift());
+        alert(color);
+        alert(color.unshift("red"));
+        alert(color);
+        color.splice(1,2);
+        alert(color);
+        color.splice(0, 2, "yello", "white");
+        alert(color);
+        alert(color.concat([1,2]));
+   
+
+        let x = ["pink","yello","white"]
+        let y = x; 
+        if(x===y)
+        {
+            y.push("black");
+        }
+        alert(x);
+
+        let sub = [ 'student', { name: 'Denny' }, 'subs',{maths:80}, function() { alert('hi'); } ];
+        alert(sub[1].name);
+        alert(sub[3].maths); 
+        sub[3](); 
+
+        for (let i = 2; i < color.length; i++) 
+        {
+            alert(color[i] );
+        }
+
+//Map
+    let map=new Map();
+    map.set(1,'num1')
+    alert(map.get(1));
+    alert(map.size);
+
+    let map = new Map([['1', 'str1'],[1, 'num1'],[true, 'bool1']]);
+    alert( map.get(1) ); 
+
+// Date
+    let x=new Date();
+    alert(x);
+    alert(x.getFullYear());
+    alert(x.getMonth());
+    alert(x.getDate());
+    alert(x.getDay());
+    alert(x.getHours());
+    alert(x.getMinutes());
+    alert(x.getMilliseconds());
+    alert(x.getUTCHours());
+    alert(x.getTimezoneOffset() );
+    alert(x.getSeconds());
+    
+     
+
+    </script>
+</body>
+</html>
