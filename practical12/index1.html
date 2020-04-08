@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <style> body { color:blue; margin: 20px } </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="main">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div id="elem">
+        <div id="elem-content" class="text-center text-white py-3">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</div>
+    </div>
+    <p class="emp">You will learn programming fundamentals and basic object-oriented concepts using the latest JavaScript syntax</p>
+    <p class="emp">JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
+    
+    <form name="myform">
+      <div class="article">Article</div>
+      <div class="long article">Long article</div>
+    </form>
+
+    <div id="btn">style example</div>
+   
+    <script>
+    // getElementById  
+      let x = document.getElementById('elem');
+      x.style.background = 'green';
+
+    //querySelectorAll    
+      let a = document.querySelectorAll(".emp");
+      for (i = 0; i < a.length; i++) {
+        a[i].style.backgroundColor = "yellow";
+      }
+
+     //getElementsByname and classname
+      let form = document.getElementsByName('myform')[0];
+      let articles = form.getElementsByClassName('long article');
+      alert(articles.length); 
+
+    // Class  
+      document.body.classList.add('page');
+      alert(document.body.className);
+
+    // Style
+      let y = document.getElementById('btn');
+      y.style.cssText="color: white;background-color: pink;text-align:center;";
+      document.body.style.margin = '10px';
+      alert(document.body.style.margin);
+      let cstyle = getComputedStyle(document.body);
+      alert(cstyle.marginLeft ); 
+      alert(cstyle.color); 
+
+    </script>
+  </body>
+</html> 
+
