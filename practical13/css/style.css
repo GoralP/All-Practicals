@@ -1,0 +1,219 @@
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../fonts/HelveticaNeue-01.ttf);
+}
+@font-face {
+    font-family: HelveticaNeue-Bold;
+    src: url(../fonts/HelveticaNeue-Bold-02.ttf);
+}
+
+@font-face {
+    font-family: HelveticaNeue-Light;
+    src: url(../fonts/HelveticaNeue-Light-08.ttf);
+}
+
+@font-face {
+    font-family: HelveticaNeue-Medium;
+    src: url(../fonts/HelveticaNeue-Medium-11.ttf);
+}
+
+
+body
+{ 
+	font-family: HelveticaNeue; 
+	
+}
+
+
+/******************************* Satrt header **************************************/
+.site-head 
+{
+	height: auto;
+	
+}
+.header-bg
+{
+	background: #d60b51;
+}
+
+.site-head .navbar {
+	height: inherit;
+}
+
+
+.img-esponsive {
+	width: 100%;
+	height: auto;
+}
+
+.round-border {
+	border: 1px solid;
+	border-radius: 10rem;
+	
+}
+
+.round-border:hover {
+	border: 1px solid;
+	border-radius: 10rem;
+	background: #f0f0f0;
+	color: #d60b51 !important;
+}
+
+/******************************* End header **************************************/
+
+/******************************* start container *********************************/
+
+.bold-text {
+	font-family: HelveticaNeue-Bold;
+}
+
+.medium-text {
+	font-family: HelveticaNeue-Medium;
+}
+.get-in-touch-h1 {
+	font-size: 3.5rem;
+}
+
+.get-in-touch-p {
+	color: #d10442;
+	font-size: 1.6rem !important;
+	font-family: HelveticaNeue-Light;
+}
+
+.icon-box {
+	text-align: center;
+	transition: .2s all;
+}
+
+.icon-box:hover {
+	transition: .2s all;
+	transform: scale(1.1);
+}
+
+.icon-box img {
+	max-width: 150px;
+}
+
+ 
+ .icon-box-p {
+	color: #d10442;
+	font-family: HelveticaNeue-Light;
+} 
+
+.icon-box-p a {
+	color: #d10442;
+}
+
+.get-in-touch-form {
+	background: #f0f0f0;
+}
+
+.get-in-touch-social {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+ul.get-in-touch-social li a {
+	width: 60px;
+	color: #ffffff;
+	background: #ababab;
+	padding: 12px;
+	border-radius: 10rem;
+	font-size: 1.5rem;
+	margin-right: 1rem !important;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+
+ul.get-in-touch-social li a:hover {
+	background: #d10442;
+}
+
+.form-control 
+{
+	display: block;
+	padding: 2rem;
+	color: #495057;
+	background-color: #fff;
+	border: none;
+	border-radius: 2rem;
+	margin: 1rem 0;
+}
+
+.form-submit 
+{
+	background: #d10442;
+	border: none;
+	padding: 10px 40px;
+	border-radius: 10rem;
+	font-size: 1.2rem;
+	float: right;
+	margin-top : 1rem;
+}
+
+.form-submit:hover {
+	background: #ababab;
+}
+
+
+.address-h5 {
+	font-family: HelveticaNeue-Bold;
+}
+
+.address-p {
+	font-family: HelveticaNeue-Light;
+	font-size: 22px;
+}
+
+
+
+/******************************* End container **************************************/
+
+
+/******************************* start footer **************************************/
+
+
+.footer{
+	background: #1f1f1f;
+	padding-bottom:40px;
+}
+
+.menu-title a
+{ 
+	color:#fff; 
+	font-size:16px; 
+	font-weight:bold; 
+}
+.footer-menu
+{ 
+	padding:0px; 
+	margin:0px; 
+	margin-bottom:20px; 
+	list-style:none; 
+}
+.footer-menu li
+{ 
+	line-height:1.1; 
+}
+.footer-menu li a
+{ 
+	color:#bbb; 
+	font-size:14px; 
+}
+
+
+.footer-text-p
+{ 
+	color:#6d6d6d; 
+	font-size:13px; 
+}
+
+/******************************* end footer **************************************/
+
+
+
