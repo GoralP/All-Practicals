@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>jQuery Functions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <h1>Hello World!</h1>
+    <h2>The purpose of jQuery is to make it much easier to use JavaScript on your website.</h2>
+
+    <p>It's important to note that this method does not replace a class.</p>
+    <p>It simply adds the class, appending it to any which may already be assigned to the elements.</p>
+    <div><img src="./images/img1.jpg" alt="nature" width="300" height="250"></div>
+    <div class="mt-5">
+    <button id="addclass">Add Class</button>
+    <button id="after">After Method</button>
+    <button id="before">Before Method</button>
+    <button id="attr">Attr Method</button>
+    <button id="append">Append Method</button>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="submit">Submit</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $("#addclass").click(function(){
+            $("p:first").addClass("intro");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#after").click(function(){
+            $("p:last").after("This is after method");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#before").click(function(){
+            $("p:first").before("This is before method<br><br>");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#attr").click(function(){
+            $("img").attr("width", "900");
+            $("img").attr("height", "500");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#append").click(function(){
+            $("p:last").append("<b> This is append text</b>");
+          });
+        });
+
+        $("#hide").click(function(){
+            $("h1").hide();
+        })
+
+        $("#show").click(function(){
+            $("h1").show();
+        })
+
+        $("#toggle").click(function(){
+            $("h1").toggle();
+        })
+
+        $("h2").mouseenter(function(){
+            $("h2").css("background-color","yellow");
+            $("h2").css("color","white");
+        })
+
+        $("h2").mouseleave(function(){
+            $("h2").css("background-color","purple");
+            $("h2").css("color","blue");
+        })
+
+        $("p:last").mouseup(function(){
+            $("p:last").before("<p style='color:green'>This is Mouseup text.<br>");
+        })
+
+        $("img").mousedown(function(){
+            $("img").after("<p style='color:blue'>This is Mousedown text.");
+        })
+
+        $("#submit").click(function(){
+            alert("submitted successfully");
+            $("p:first").html("<p style='font-size:30px; color:red'>This is submitted text.</i></b>");
+        }) 
+        
+        </script>
+
+  </body>
+</html>
