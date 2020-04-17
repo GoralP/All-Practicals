@@ -14,11 +14,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <h1>Hello World!</h1>
+    <h1 class="hello">Hello World!</h1>
     <h2>The purpose of jQuery is to make it much easier to use JavaScript on your website.</h2>
+    <lable>Enter Name</lable><br>
 
     <p>It's important to note that this method does not replace a class.</p>
     <p>It simply adds the class, appending it to any which may already be assigned to the elements.</p>
+
+    <input type="text" class="field" placeholder="First name"><br>
+    <input type="text" class="field" placeholder="Last name"><br>
+    
+    
+
+    <ul>
+      <li>Milk</li>
+      <li>Coffee</li>
+    </ul>
+
     <div><img src="./images/img1.jpg" alt="nature" width="300" height="250"></div>
     <div class="mt-5">
     <button id="add_class">Add Class</button>
@@ -30,6 +42,12 @@
     <button id="show">Show</button>
     <button id="toggle">Toggle</button>
     <button id="submit">Submit</button>
+    <button id="append_to">AppendTo</button>
+    <button id="clone">Clone</button>
+    <button id="each">Each</button>
+    <button id="empty">Empty</button>
+    <button id="has">Has class</button>
+    
     </div>
 
     <script>
@@ -90,9 +108,48 @@
             $("p:first").html("<p style='font-size:30px; color:red'>This is submitted text.</i></b>");
           }) 
 
+          $("h1").add("lable").css("background-color", "green");
+
+          $("#append_to").click(function(){
+            $("<sapn>Appendto text</span").appendTo("lable");
+          })
+
+          $(".field").change(function(){
+            $(this).css("background-color","gray")
+          })
+
+          $("ul").children().css("color","red");  
+
+          $("#clone").click(function(){
+            $("lable").clone().prependTo("p");
+          })
+
+          $("#each").click(function(){
+            $("li").each(function(){  
+              alert($(this).text());
+            })
+          })
+
+          $("#empty").click(function(){
+            $("p:first").empty();
+          })
+
+          $("#has").click(function(){
+          alert($("h1").hasClass("hello")) 
+          $("h1").html("<i>This is has class</i>"); 
+          }) 
+
+          $("input").keydown(function(){
+            $("input").css("background-color", "yellow");
+          });
+          $("input").keyup(function(){
+            $("input").css("background-color", "pink");
+          });
+          
+          
+
         })
         
     </script>
-
   </body>
 </html>
