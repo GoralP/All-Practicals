@@ -144,7 +144,7 @@
                <ul class="get-in-touch-social">
                   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i id="facebook" class="fa fa-facebook"></i></a></li>
                </ul>
             </div>
             <div class="col-md" >
@@ -161,7 +161,7 @@
                      </div>
                      
                   </div>
-                  <button id="#submit" type="submit" class="btn btn-primary form-submit">Submit</button>
+                  <button id="submit" type="submit" class="btn btn-primary form-submit">Submit</button>
                </form>
             </div>
          </div>
@@ -236,13 +236,15 @@
    </div>
    <!-- end footer -->
    
-   <!-- <script>
-      $("#submit").click(function(){
-            alert("submitted successfully");
-            $("#submit").value("<p style='font-size:30px; color:red'>This is submitted text.</i></b>");
-          }) 
+   <script>
+      $(document).ready(function(){
+         $("#submit").click(function(){
+            alert("Submitted successfully");
+            $("#submit").value("");
+         })
+      })   
 
-   </script> -->
+   </script>
 
 
    </body>
