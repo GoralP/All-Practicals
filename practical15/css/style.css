@@ -1,0 +1,28 @@
+.btn
+{
+    width:97px;
+    height:55px;
+    background-color:skyblue;
+}
+.formstyle
+{
+    width:300px;
+    height:400px;
+    margin:auto;
+    margin-top:100px;
+    background-color: cornflowerblue;
+    border: 5px solid black;
+}
+.clear
+{
+    width:300px;
+    height:54px;
+    background-color:skyblue;
+    font-size:20px;
+}
+.textbox
+{
+    height:70px;
+    width:300px;
+}
+            

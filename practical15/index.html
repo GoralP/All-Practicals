@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="formstyle">
+            <form name="forms">
+                <input type="text" class="textbox" id="result" placeholder="0"><br>
+                <input type="button" class="btn" name="b1" value="1" onclick="cal('1')"> 
+                <input type="button" class="btn" name="b2" value="2" onclick="cal('2')">
+                <input type="button" class="btn" name="b3" value="3" onclick="cal('3')">
+                <br>
+
+                <input type="button" class="btn" name="b4" value="4" onclick="cal('4')">
+                <input type="button" class="btn" name="b5" value="5" onclick="cal('5')">
+                <input type="button" class="btn" name="b6" value="6" onclick="cal('6')">
+                <br>
+
+                <input type="button" class="btn" name="b7" value="7" onclick="cal('7')">
+                <input type="button" class="btn" name="b8" value="8" onclick="cal('8')">
+                <input type="button" class="btn" name="b9" value="9" onclick="cal('9')">
+                <br>
+
+                <input type="button" class="btn" name="b0" value="0" onclick="cal('0')">
+                <input type="button" class="btn" name="add" value="+" onclick="cal('+')">
+                <input type="button" class="btn" name="minus" value="-" onclick="cal('-')">
+                <br>
+
+                <input type="button" class="btn" name="multiplication" value="*" onclick="cal('*')">
+                <input type="button" class="btn" name="division" value="/" onclick="cal('/')">
+                <input type="button" class="btn" name="ans" value="=" onclick="answer()">
+                <br>
+
+                <input type="button" class="clear" name="clr" value="CLEAR"  onclick="cleard()">
+
+            </form>
+        </div>
+        <script>
+            function cal(value)
+            {
+			    document.getElementById('result').value+=value;
+            }
+            function answer(){
+                let value1= eval(document.getElementById('result').value);
+                document.getElementById('result').value=value1;	
+            }
+            function cleard(){
+            document.getElementById('result').value="";
+            }
+                
+        </script>
+    </body>
+</html>
