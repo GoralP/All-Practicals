@@ -23,28 +23,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
-    <h1 class="guess">Guess The Number between 1 to 100</h1> 
+    <h1 class="guess">Guess The Number between 1 to 6</h1> 
     <div class="form"> 
         
         <label>Enter a Number: </label> 
-        <input type = "text" id = "guess_number" >
-        <input  id = "submit" type = "submit" value = "Submit" onclick="dice()" > 
+        <input type = "text" id = "guess_number" placeholder="1-6" maxlength="1">
+        <input  id = "submit" type = "submit" value = "Submit" onclick="valid()" > 
     </div> 
   
-    <script> 
+    <script>
+    function valid()
+    {
+        
+        // var y = document.getElementById("guess_number").value; 
+        // for(i=y;i<=6;i++)
+        // {
+        //     dice();
+        //     break;
+        // }
+        var y = document.getElementById("guess_number").value; 
+        if(y==1 || y==2 || y==3 || y==4 || y==5 || y==6)
+        {
+            dice();
+        }
+        else{
+            alert("Invalid Input!! Please enter number between 1 to 6");
+        }
+    } 
         function dice() 
         {    
-            var x = Math.floor(Math.random() * 100); 
+            var x = Math.floor(Math.random() * 7); 
             var y = document.getElementById("guess_number").value; 
             if(y == x) 
             {     
                 alert("YOU WIN"); 
             } 
-            else
+            else 
             { 
                 alert("YOU LOOSE") 
             } 
         } 
+        
     </script> 
   </body>
 </html>
