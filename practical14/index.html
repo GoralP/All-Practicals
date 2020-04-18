@@ -13,16 +13,18 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+    <div class="mx-4">
     <h1 class="hello">Hello World!</h1>
     <h2>The purpose of jQuery is to make it much easier to use JavaScript on your website.</h2>
     <lable>Enter Name</lable><br>
 
     <p>It's important to note that this method does not replace a class.</p>
     <p>It simply adds the class, appending it to any which may already be assigned to the elements.</p>
+    <h6 style="color:rgb(58, 202, 22)">This is removeattr text.</h6>
 
     <input type="text" class="field" placeholder="First name"><br>
     <input type="text" class="field" placeholder="Last name"><br>
+    
     
     
 
@@ -32,21 +34,27 @@
     </ul>
 
     <div><img src="./images/img1.jpg" alt="nature" width="300" height="250"></div>
-    <div class="mt-5">
-    <button id="add_class">Add Class</button>
-    <button id="after">After Method</button>
-    <button id="before">Before Method</button>
-    <button id="attr">Attr Method</button>
-    <button id="append">Append Method</button>
+    <div class="mt-3">
+    <button id="add_class">AddClass</button>
+    <button id="after">After</button>
+    <button id="before">Before</button>
+    <button id="attr">Attr</button>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
     <button id="hide">Hide</button>
     <button id="show">Show</button>
     <button id="toggle">Toggle</button>
     <button id="submit">Submit</button>
-    <button id="append_to">AppendTo</button>
     <button id="clone">Clone</button>
     <button id="each">Each</button>
     <button id="empty">Empty</button>
     <button id="has">Has class</button>
+    <button id="remove">Remove</button>
+    <button id="remove_attr">Remove Attr</button>
+    <button id="remove_class">Remove Class</button>
+   
+    
+    
     
     </div>
 
@@ -73,6 +81,7 @@
             $("p:last").append("<b> This is append text</b>");
           })
 
+          
           $("#hide").click(function(){
             $("h1").hide();
           }) 
@@ -110,10 +119,7 @@
 
           $("h1").add("lable").css("background-color", "green");
 
-          $("#append_to").click(function(){
-            $("<sapn>Appendto text</span").appendTo("lable");
-          })
-
+          
           $(".field").change(function(){
             $(this).css("background-color","gray")
           })
@@ -146,10 +152,35 @@
             $("input").css("background-color", "pink");
           });
           
+          $("p").on("click", function(){
+          alert("clicked on this paragraph");
+          });
+
+          $("#prepend").click(function(){
+            $("p").prepend("<b> This is prepand text</b>");
+          })
+
+          $("#remove").click(function(){
+            $("h1").remove();
+          })
+
+          $("#remove_attr").click(function(){
+            $("h6").removeAttr("style");
+          })
+          
+          $("#remove").click(function(){
+            $("p:last").remove();
+          })
+
+          $("#remove_class").click(function(){
+            $("p:first").removeClass("intro");
+          }) 
+          
           
 
         })
         
     </script>
+    </div>
   </body>
 </html>
