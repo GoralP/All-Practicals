@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href=".css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <form class="ml-5" name="form_val">
+      <table class="border border-denger" name="t1">
+        <tr>
+          <td><input class="btn border-danger" type="button" name="b0" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b1" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b2" value="" onclick="place(this)" style="width: 50px;"></td>
+        </tr><br>
+        <tr>
+          <td><input class="btn border-danger" type="button" name="b3" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b4" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b5" value="" onclick="place(this)" style="width: 50px;"></td>
+        </tr><br>
+        <tr>
+          <td><input class="btn border-danger" type="button" name="b6" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b7" value="" onclick="place(this)" style="width: 50px;"></td>
+          <td><input class="btn border-danger" type="button" name="b8" value="" onclick="place(this)" style="width: 50px;"></td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      let squre;
+      let letter="X"
+      function place(squre)
+      {
+        if(squre.value=="")
+        {
+          squre.value=letter;
+        
+          if (letter=="X")
+          {
+            letter="O";
+          }
+          else
+          {
+            letter ="X";
+          }
+        }
+        if(checkX())
+        {
+          alert("player " + squre.value + " Win!")
+          return;
+        } 
+        else if(checkO())
+        {
+          alert("player " + squre.value + " Win!")
+          return;
+        }
+      }
+    
+      function checkX()
+      {
+          if(document.form_val.b0.value=="X" && document.form_val.b1.value=="X" && document.form_val.b2.value=="X" )
+          {
+            return true;
+          }
+          else if(document.form_val.b3.value=="X" && document.form_val.b4.value=="X" && document.form_val.b5.value=="X" )
+          {
+              return true;
+          }
+          else if(document.form_val.b6.value=="X" && document.form_val.b7.value=="X" && document.form_val.b8.value=="X" )
+          {
+              return true;
+          }
+          else if(document.form_val.b0.value=="X" && document.form_val.b3.value=="X" && document.form_val.b6.value=="X" )
+          {
+            return true; 
+          }
+          else if(document.form_val.b1.value=="X" && document.form_val.b4.value=="X" && document.form_val.b7.value=="X" )
+          {
+            return true;
+          }
+          else if(document.form_val.b2.value=="X" && document.form_val.b5.value=="X" && document.form_val.b8.value=="X" )
+          {
+            return true;
+          }
+          else if(document.form_val.b0.value=="X" && document.form_val.b4.value=="X" && document.form_val.b8.value=="X" )
+          {
+            return true;
+          }
+          else if(document.form_val.b2.value=="X" && document.form_val.b4.value=="X" && document.form_val.b6.value=="X" )
+          {
+            return true;
+          }
+          else 
+          {
+            return false;
+          }
+      }
+
+      function checkO()
+      {
+          if(document.form_val.b0.value=="O" && document.form_val.b1.value=="O" && document.form_val.b2.value=="O" )
+          {
+            return true;
+          }
+          else if(document.form_val.b3.value=="O" && document.form_val.b4.value=="O" && document.form_val.b5.value=="O" )
+          {
+              return true;
+          }
+          else if(document.form_val.b6.value=="O" && document.form_val.b7.value=="O" && document.form_val.b8.value=="O" )
+          {
+              return true;
+          }
+          else if(document.form_val.b0.value=="O" && document.form_val.b3.value=="O" && document.form_val.b6.value=="O" )
+          {
+            return true; 
+          }
+          else if(document.form_val.b1.value=="O" && document.form_val.b4.value=="O" && document.form_val.b7.value=="O" )
+          {
+            return true;
+          }
+          else if(document.form_val.b2.value=="O" && document.form_val.b5.value=="O" && document.form_val.b8.value=="O" )
+          {
+            return true;
+          }
+          else if(document.form_val.b0.value=="O" && document.form_val.b4.value=="O" && document.form_val.b8.value=="O" )
+          {
+            return true;
+          }
+          else if(document.form_val.b2.value=="O" && document.form_val.b4.value=="O" && document.form_val.b6.value=="O" )
+          {
+            return true;
+          }
+          else 
+          {
+            return false;
+          }
+      }
+
+    </script>
+  </body>
+</html>
