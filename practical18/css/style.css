@@ -8,19 +8,16 @@
 	border-radius: 2rem;
 	margin: 1rem 0;
 }
-
 .form-button 
 {
 	border-radius: 10rem;
 	font-size: 1.9rem !important;
-    /* padding: 1rem !important; */
     width: 60px;
     padding-top: 0 !important;
-	margin-top : 1rem;
+	margin-top : 1rem ; 
 }
 .form-submit 
 {
-	background: #d10442;
 	border: none;
 	padding: 11px 22px !important;
 	border-radius: 10rem;
