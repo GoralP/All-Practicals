@@ -54,7 +54,7 @@
                <div class="col-sm-1">
                      <button  type="submit" id="add" class="btn btn-primary form-button" >+</button>
                </div>
-               <div id="append_new_div"></div> 
+              
             </div>
             
             <div class="mt-5">
@@ -74,30 +74,25 @@
         
         $(document).ready(function(){
          
-         let maxField = 5;
-         let addButton = $('#add');
-         let newField = $('#form_field');
-         let field ='<div class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div class="col-sm-1"><button  type="submit" id="remove" class="btn btn-primary form-button" >-</button></div>';
-         let i = 1;    
+         var maxField = 5;
+         var addButton = $('#add');
+         var newField = $('#form_field');
+         // var field ='<div class="form-row" id="f1" style="width:1500px"><div class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div class="col-sm-1"><button  type="submit" id="btn_remove" class="btn btn-primary form-button" >-</button></div></div>';
+         var i = 1;    
            $(addButton).click(function(e){
               e.preventDefault();
               if(i<=maxField)
               {
                  i++;
-                 $(newField).append(field);
+                 $(newField).append('<div class="form-row" id="f1" style="width:1500px"><div class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div class="col-sm-1"><button  type="submit" id="remove" class="btn btn-primary form-button" >-</button></div></div>');
               }
            })
          
-
-            $("#remove").click(function(e){ 
-		         e.preventDefault();
-                $(this).parent('div').remove(); 
-                i--;
-
-	         })
-           
-        })
-        
+           $(newField).on('click', '#remove', function(){
+                $(this).closest('div.form-row').remove(); 
+                i--; 
+            });
+        })  
 
       
 
