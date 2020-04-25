@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div class=" mx-5 mt-5">
+        <form>
+        <div class="form-row" >
+            <div class="col-sm-1">
+                <input type="checkbox" class="form-control" id="select_all">
+                <label class="text-success" >Select All</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="text-info form-label">Group Name</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="text-info form-label">Goal Metric</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="text-info form-label">Goal Value</label>
+            </div>
+            <div class="col-sm-2">  
+                <label class="text-info form-label">Goal Frequency</label>
+            </div>
+        </div>
+    
+        <div class=" mt-3  form-row form-field">
+            <div class="col-sm-1">
+                <input type="checkbox" class="form-control check_box" >
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="Goal Name">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="Goal Metric">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="Goal Value">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" placeholder="Goal Frequency">
+            </div>
+            <div class="col-sm-2">
+                <button  type="submit" id="add_new" class="btn btn-primary form-button remove" >Add More</button>
+            </div>
+            
+        </div>
+        <div class="mt-4">
+             Total Number:<span id="new_div">0</span>
+        </div>
+        
+    </form>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var i = 0;
+            
+            var checkbox = $('input[type="checkbox"]');
+            $('#add_new').click(function (e) {
+                e.preventDefault();
+                i++;
+                $('.form-field').append('<div class="row mt-3" id="row'+i+'" style="width:1300px; margin:2px;"><div class="col-sm-1"><input type="checkbox" class="form-control check_box" id="check_box_id'+i+'""></div><div class="col-sm-2" id="first_field'+i+'"><input type="text" class="form-control" placeholder="Goal Name"></div><div class="col-sm-2" id="second_field'+i+'"><input type="text" class="form-control" placeholder="Goal Metric"></div><div class="col-sm-2" id="third_field'+i+'"><input type="text" class="form-control" placeholder="Goal Value"></div><div class="col-sm-2" id="fourth_field'+i+'"><input type="text" class="form-control" placeholder="Goal Frequency"></div><div class="col-sm-2"><button  type="submit" id="'+i+'" class="btn btn-primary form-button remove" >Remove</button></div></div>');
+            });
+
+            $(document).on('click', '.remove', function () {
+                var button_id = $(this).attr("id");
+                $('#row'+button_id).remove();
+            });
+
+            $("#select_all").click(function () {
+		        $('.check_box').prop('checked', this.checked);
+	        });
+            
+            $(checkbox).change(function(){
+                var count_checkbox = checkbox.filter(':checked').length;
+                $('#new_div').text(count_checkbox);
+            });
+        });
+
+           
+
+    </script>   
+  </body>
+</html>
