@@ -41,7 +41,7 @@
             </div>
            </div>
 
-            <div class="form-row" id ="form_field">
+            <div class="form-row form_field1" id ="form_field">
                
                <div class="col-sm-4">
                   
@@ -77,23 +77,29 @@
          var maxField = 5;
          var addButton = $('#add');
          var newField = $('#form_field');
-         // var field ='<div class="form-row" id="f1" style="width:1500px"><div class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div class="col-sm-1"><button  type="submit" id="btn_remove" class="btn btn-primary form-button" >-</button></div></div>';
          var i = 1;    
            $(addButton).click(function(e){
               e.preventDefault();
               if(i<=maxField)
               {
                  i++;
-                 $(newField).append('<div class="form-row" id="f1" style="width:1500px"><div class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div class="col-sm-1"><button  type="submit" id="remove" class="btn btn-primary form-button" >-</button></div></div>');
+                 $(newField).append('<div class="row form-row" id="row'+i+'" style="width:1285px; margin:2px;"><div id="first_field'+i+'" class="col-sm-4"><input type="text" class="form-control" placeholder="Assets Name"></div><div id="second_field'+i+'" class="col-sm-4"><input type="text" class="form-control" placeholder="Quantity" style="background-color: rgb(242, 243, 247);"></div><div  class="col-sm-1"><button id="'+i+'" type="submit" class="btn btn-primary form-button remove" >-</button></div></div>');
+              }
+              else{
+                 alert("You can add maximum 5 rows");
+                    
               }
            })
-         
-           $(newField).on('click', '#remove', function(){
-                $(this).closest('div.form-row').remove(); 
-                i--; 
-            });
-        })  
 
+           $(newField).on("click",".remove",function(e){
+                e.preventDefault()
+                var button_id = $(this).attr("id");
+                $('#row'+button_id).remove();
+                i=0;
+            })
+         
+         
+         })
       
 
 
