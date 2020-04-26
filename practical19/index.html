@@ -81,16 +81,19 @@
 
             $("#select_all").click(function () {
 		        $('.check_box').prop('checked', this.checked);
+                
 	        });
             
             $(document).on('click', '.check_box', function() {
                 var count_checkbox = $('input[name="check"]:checked').length;
                     $('#new_div').text(count_checkbox);
+                    $('input[name="check"]:checked').parent().parent().addClass('active');
             });
 
             $(document).on('click', '.selectAll', function() {
                 var count_checkbox = $('input[name="check"]:checked').length;
                     $('#new_div').text(count_checkbox);
+                    $('input[name="check"]:checked').parent().parent().addClass('active');
             });
 
             $(document).on('click', '.remove', function() {
@@ -100,27 +103,49 @@
 
             $(document).on('keyup', '.goalName', function() {
                 var textbox=$('input:text[name=goal_name]').val();
-                $('input:text[name=goal_name]').val(textbox);
+				$('input:text[name=goal_name]').each(function(){
+					var main = $(this).parent().parent();
+					if($(main).hasClass("active"))
+					{
+						$(this).val(textbox);
+					}
+				});
             })
 
             $(document).on('keyup', '.goalMetric', function() {
                 var textbox=$('input:text[name=goal_metric]').val();
-                $('input:text[name=goal_metric]').val(textbox);
+                $('input:text[name=goal_metric]').each(function(){
+					var main = $(this).parent().parent();
+					if($(main).hasClass("active"))
+					{
+						$(this).val(textbox);
+					}
+				});
+                
             })
 
             $(document).on('keyup', '.goalValue', function() {
                 var textbox=$('input:text[name=goal_value]').val();
-                $('input:text[name=goal_value]').val(textbox);
+                $('input:text[name=goal_value]').each(function(){
+					var main = $(this).parent().parent();
+					if($(main).hasClass("active"))
+					{
+						$(this).val(textbox);
+					}
+				});
             })
 
             $(document).on('keyup', '.goalFrequency', function() {
                 var textbox=$('input:text[name=goal_frequency]').val();
-                $('input:text[name=goal_frequency]').val(textbox);
+                $('input:text[name=goal_frequency]').each(function(){
+					var main = $(this).parent().parent();
+					if($(main).hasClass("active"))
+					{
+						$(this).val(textbox);
+					}
+				});
             })
-
-           
      });
-
            
 
     </script>   
