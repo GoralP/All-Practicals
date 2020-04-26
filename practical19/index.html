@@ -41,16 +41,16 @@
                 <input type="checkbox" class="form-control check_box" name="check" >
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goal" placeholder="Goal Name">
+                <input type="text" class="form-control goalName" placeholder="Goal Name" name="goal_name">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goal" placeholder="Goal Metric">
+                <input type="text" class="form-control goalMetric" placeholder="Goal Metric" name="goal_metric">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goal" placeholder="Goal Value">
+                <input type="text" class="form-control goalValue" placeholder="Goal Value" name="goal_value">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goal" placeholder="Goal Frequency">
+                <input type="text" class="form-control goalFrequency" placeholder="Goal Frequency" name="goal_frequency">
             </div>
             <div class="col-sm-2">
                 <button  type="submit" id="add_new" class="btn btn-primary form-button remove" >Add More</button>
@@ -67,11 +67,11 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var i = 0;
-            var a=('<div class="row mt-3" id="row'+i+'" style="width:1300px; margin:2px;"><div class="col-sm-1"><input type="checkbox" class="form-control check_box" name="check" id="check_box_id'+i+'""></div><div class="col-sm-2" id="first_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Name"></div><div class="col-sm-2" id="second_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Metric"></div><div class="col-sm-2" id="third_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Value"></div><div class="col-sm-2" id="fourth_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Frequency"></div><div class="col-sm-2"><button  type="submit" id="'+i+'" class="btn btn-primary form-button remove" >Remove</button></div></div>');
+           
             $('#add_new').click(function (e) {
                 e.preventDefault();
                 i++;
-                $('.form-field').append('<div class="row mt-3" id="row'+i+'" style="width:1300px; margin:2px;"><div class="col-sm-1"><input type="checkbox" class="form-control check_box" name="check" id="check_box_id'+i+'""></div><div class="col-sm-2" id="first_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Name"></div><div class="col-sm-2" id="second_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Metric"></div><div class="col-sm-2" id="third_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Value"></div><div class="col-sm-2" id="fourth_field'+i+'"><input type="text" class="form-control goal" placeholder="Goal Frequency"></div><div class="col-sm-2"><button  type="submit" id="'+i+'" class="btn btn-primary form-button remove" >Remove</button></div></div>');
+                $('.form-field').append('<div class="row mt-3" id="row'+i+'" style="width:1300px; margin:2px;"><div class="col-sm-1"><input type="checkbox" class="form-control check_box" name="check" id="check_box_id'+i+'""></div><div class="col-sm-2" id="first_field'+i+'"><input type="text" class="form-control goalName" placeholder="Goal Name" name="goal_name"></div><div class="col-sm-2" id="second_field'+i+'"><input type="text" class="form-control goalMetric" placeholder="Goal Metric" name="goal_metric"></div><div class="col-sm-2" id="third_field'+i+'"><input type="text" class="form-control goalValue" placeholder="Goal Value" name="goal_value"></div><div class="col-sm-2" id="fourth_field'+i+'"><input type="text" class="form-control goalFrequency" placeholder="Goal Frequency" name="goal_frequency"></div><div class="col-sm-2"><button  type="submit" id="'+i+'" class="btn btn-primary form-button remove" >Remove</button></div></div>');
             });
 
             $(document).on('click', '.remove', function () {
@@ -97,6 +97,26 @@
                 var count_checkbox = $('input[name="check"]:checked').length;
                     $('#new_div').text(count_checkbox);
             });
+
+            $(document).on('keyup', '.goalName', function() {
+                var textbox=$('input:text[name=goal_name]').val();
+                $('input:text[name=goal_name]').val(textbox);
+            })
+
+            $(document).on('keyup', '.goalMetric', function() {
+                var textbox=$('input:text[name=goal_metric]').val();
+                $('input:text[name=goal_metric]').val(textbox);
+            })
+
+            $(document).on('keyup', '.goalValue', function() {
+                var textbox=$('input:text[name=goal_value]').val();
+                $('input:text[name=goal_value]').val(textbox);
+            })
+
+            $(document).on('keyup', '.goalFrequency', function() {
+                var textbox=$('input:text[name=goal_frequency]').val();
+                $('input:text[name=goal_frequency]').val(textbox);
+            })
 
            
      });
