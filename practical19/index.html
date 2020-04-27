@@ -41,16 +41,16 @@
                 <input type="checkbox" class="form-control check_box" name="check" >
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goalName" placeholder="Goal Name" name="goal_name">
+                <input type="text" class="form-control goalName_f" placeholder="Goal Name" name="goal_name">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goalMetric" placeholder="Goal Metric" name="goal_metric">
+                <input type="text" class="form-control goalMetric_f" placeholder="Goal Metric" name="goal_metric">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goalValue" placeholder="Goal Value" name="goal_value">
+                <input type="text" class="form-control goalValue_f" placeholder="Goal Value" name="goal_value">
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control goalFrequency" placeholder="Goal Frequency" name="goal_frequency">
+                <input type="text" class="form-control goalFrequency_f" placeholder="Goal Frequency" name="goal_frequency">
             </div>
             <div class="col-sm-2">
                 <button  type="submit" id="add_new" class="btn btn-primary form-button remove" >Add More</button>
@@ -87,8 +87,71 @@
             $(document).on('click', '.check_box', function() {
                 var count_checkbox = $('input[name="check"]:checked').length;
                     $('#new_div').text(count_checkbox);
-                    $('input[name="check"]:checked').parent().parent().addClass('active');
-            });
+					
+					$('input[name="check"]').each(function(){
+						if($(this).is(":checked"))
+						{
+							$(this).parent().parent().addClass('active');
+						}
+						else{
+							$(this).parent().parent().removeClass('active');
+						}
+					});     
+                    
+					var textbox=$('.goalName_f').val();
+                    $('.goalName').each(function(){
+					    var main = $(this).parent().parent();
+					        if($(main).hasClass("active"))
+					        {
+						        $(this).val(textbox);
+					        }
+                            else
+                            {
+                                $(this).val("");
+                            }
+				    });
+
+                    var textbox=$('.goalMetric_f').val();
+                    $('.goalMetric').each(function(){
+					    var main = $(this).parent().parent();
+					        if($(main).hasClass("active"))
+					        {
+						        $(this).val(textbox);
+					        }
+                            else
+                            {
+                                $(this).val("");
+                            }
+				    });
+
+                    var textbox=$('.goalValue_f').val();
+                    $('.goalValue').each(function(){
+					    var main = $(this).parent().parent();
+					        if($(main).hasClass("active"))
+					        {
+						        $(this).val(textbox);
+					        }
+                            else
+                            {
+                                $(this).val("");
+                            }
+				    });
+
+                    var textbox=$('.goalFrequency_f').val();
+                    $('.goalFrequency').each(function(){
+					    var main = $(this).parent().parent();
+					        if($(main).hasClass("active"))
+					        {
+						        $(this).val(textbox);
+					        }
+                            else
+                            {
+                                $(this).val("");
+                            }
+				    });
+                    
+
+                });
 
             $(document).on('click', '.selectAll', function() {
                 var count_checkbox = $('input[name="check"]:checked').length;
@@ -101,7 +164,7 @@
                     $('#new_div').text(count_checkbox);
             });
 
-            $(document).on('keyup', '.goalName', function() {
+            $(document).on('keyup', '.goalName_f', function() {
                 var textbox=$('input:text[name=goal_name]').val();
 				$('input:text[name=goal_name]').each(function(){
 					var main = $(this).parent().parent();
@@ -112,7 +175,7 @@
 				});
             })
 
-            $(document).on('keyup', '.goalMetric', function() {
+            $(document).on('keyup', '.goalMetric_f', function() {
                 var textbox=$('input:text[name=goal_metric]').val();
                 $('input:text[name=goal_metric]').each(function(){
 					var main = $(this).parent().parent();
@@ -120,11 +183,12 @@
 					{
 						$(this).val(textbox);
 					}
+                    
 				});
                 
             })
 
-            $(document).on('keyup', '.goalValue', function() {
+            $(document).on('keyup', '.goalValue_f', function() {
                 var textbox=$('input:text[name=goal_value]').val();
                 $('input:text[name=goal_value]').each(function(){
 					var main = $(this).parent().parent();
@@ -135,7 +199,7 @@
 				});
             })
 
-            $(document).on('keyup', '.goalFrequency', function() {
+            $(document).on('keyup', '.goalFrequency_f', function() {
                 var textbox=$('input:text[name=goal_frequency]').val();
                 $('input:text[name=goal_frequency]').each(function(){
 					var main = $(this).parent().parent();
