@@ -22,8 +22,8 @@
     <p>It simply adds the class, appending it to any which may already be assigned to the elements.</p>
     <h6 style="color:rgb(58, 202, 22)">This is removeattr text.</h6>
 
-    <input type="text" class="field" placeholder="First name"><br>
-    <input type="text" class="field" placeholder="Last name"><br>
+    <input type="text" class="field" placeholder="First name" name="check"><br>
+    <input type="text" class="field" placeholder="Last name" name="check"><br>
     
     
     
@@ -59,6 +59,7 @@
     </div>
 
     <script>
+        
         $(document).ready(function(){
           $("#add_class").click(function(){
             $("p:first").addClass("intro");
@@ -126,8 +127,10 @@
 
           $("ul").children().css("color","red");  
 
-          $("#clone").click(function(){
-            $("lable").clone().prependTo("p");
+          $("input").click(function(){
+            value = $("input").val(); 
+            console.log(value);
+            // $(value).clone().prependTo("p");
           })
 
           $("#each").click(function(){
