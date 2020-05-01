@@ -40,40 +40,66 @@
         $(".all").click(function(){
             $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {        
                 $.each(data, function(i,item){
-                        var all = '<tr><td>' + item.userId+'</td><td>' + item.id+'</td><td>' + item.title+'</td><td>' +item.body+'</td></tr>';
+                        var all = '<tr id="row'+i+'"><td>' + item.userId+'</td><td>' + item.id+'</td><td>' + item.title+'</td><td>' +item.body+'</td></tr>';
                         $('#table').append(all); 
+                        if(i%2==0)
+                        {
+                            $('#row'+i).css("background-color","yellow")
+                        }
+                        else{
+                            $('#row'+i).css("background-color","blue")
+                        }
+
                 });
                 
             });
         }) 
 
         $(".last").click(function(){
-             $('#table').empty();
-            $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) { 
-                     var data_length=data.length;
-                     var data_length_minus=data.length-10;
-                    for(var j=data_length_minus;j<=data_length;j++) 
-                    {
-                        var y ='<tr><td>' + data[j]['userId']+'</td><td>' + data[j]['id']+'</td><td>' + data[j]['title']+'</td><td>' + data[j]['body']+'</td></tr>'
-                        $('#table').append(y);
-                    }
-            });
-        }) 
+                $('#table').empty();
+                $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {   
+                        var data_length = data.length
+                        var data_length_minus=data.length-10;
+                        for(var j=data_length_minus;j<data_length;j++) 
+                        {
+                            var y ='<tr id="row'+j+'"><td>' +data[j]['userId']+'</td><td>' + data[j]['id']+'</td><td>' + data[j]['title']+'</td><td>' + data[j]['body']+'</td></tr>'
+                           
+                            $('#table').append(y);
+                            // $("tr:nth-child(odd)").css("background-color","yellow");
+                            // $("tr:nth-child(even)").css("background-color","blue");
+                            if(j%2==0)
+                            {
+                                $('#row'+j).css("background-color","yellow")
+                            }
+                            else{
+                                $('#row'+j).css("background-color","blue")
+                            }
+                            
+                                
+                        }
+                });
+            })  
 
         $(".first").click(function(){
             $('#table').empty();
             $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {  
                     var data_length_ten=data.length=10;
-                    for(var k=0;k<=data_length_ten;k++) 
+                    for(var k=0;k<data_length_ten;k++) 
                     {
-                        var y ='<tr><td>' + data[k]['userId']+'</td><td>' + data[k]['id']+'</td><td>' + data[k]['title']+'</td><td>' + data[k]['body']+'</td></tr>'
-                        $('#table').append(y);
+                        var z ='<tr id="row'+k+'"><td>' + data[k]['userId']+'</td><td>' + data[k]['id']+'</td><td>' + data[k]['title']+'</td><td>' + data[k]['body']+'</td></tr>'
+                        $('#table').append(z);
+                        if(k%2==0)
+                            {
+                                $('#row'+k).css("background-color","yellow")
+                            }
+                            else{
+                                $('#row'+k).css("background-color","blue")
+                            }
+                       
                     }
+                    
             });
-        }) 
-
-        
-        
+        })
     });
 
 </script>
